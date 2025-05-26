@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game By Komang Rangga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>    <div class="game-container">
+        <h1>Snake Game By Komang Rangga</h1>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>        <div class="game-header">
+            <div class="score-container">
+                <span>Score: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="high-score-container">
+                <span>High Score: </span>
+                <span id="highScore">0</span>
+            </div>
+            <div class="timer-container" id="timerContainer" style="display: none;">
+                <span>Time: </span>
+                <span id="timer">60</span>s
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button id="startBtn">Start Game</button>
+            <button id="resetBtn">Reset Game</button>
+        </div>
+        <div class="customization">
+            <h3>Customization</h3>            <div class="options">
+                <div class="option">
+                    <label for="gameMode">Game Mode:</label>
+                    <select id="gameMode">
+                        <option value="classic">Classic</option>
+                        <option value="noWalls">No Walls</option>
+                        <option value="obstacles">Obstacles</option>
+                        <option value="timeAttack">Time Attack</option>
+                        <option value="growShrink">Grow & Shrink</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="snakeStyle">Snake Style:</label>
+                    <select id="snakeStyle">
+                        <option value="gradient">Gradient</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="classic">Classic</option>
+                        <option value="neon">Neon</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="foodStyle">Food Style:</label>
+                    <select id="foodStyle">
+                        <option value="apple">Apple</option>
+                        <option value="circle">Circle</option>
+                        <option value="diamond">Diamond</option>
+                        <option value="star">Star</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <p>Use the arrow keys or WASD to move the snake.</p>
+            <p>Eat the food to grow and earn points.</p>
+            <p>Avoid hitting the walls or yourself!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
